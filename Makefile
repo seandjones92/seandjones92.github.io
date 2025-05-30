@@ -3,7 +3,7 @@ SRC := Markdown
 DST := HTML
 
 # command and flags
-PANDOC := pandoc -s
+PANDOC := pandoc -s --template=PandocTemplates/template.html
 
 # find all .md under SRC
 MD := $(shell find $(SRC) -name '*.md')
@@ -12,7 +12,7 @@ MD := $(shell find $(SRC) -name '*.md')
 HTML := $(patsubst $(SRC)/%.md,$(DST)/%.html,$(MD))
 
 # default target
-all: $(HTML)
+all: clean $(HTML)
 
 # pattern rule: build HTML/%.html from Markdown/%.md
 $(DST)/%.html: $(SRC)/%.md
