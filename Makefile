@@ -22,7 +22,7 @@ $(DST)/%.html: $(SRC)/%.md
 
 # Use python to serve the HTML directory
 .PHONY: serve
-serve:
+serve: all
 	@echo "Serving HTML files at http://localhost:8000"
 	python3 -m http.server --directory $(DST)
 
