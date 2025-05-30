@@ -4,6 +4,4 @@ title: Posts
 
 Here are my posts
 
-- 1 post
-- 2 post
-- 3 post
+- [My First Post](./2025/may/29.html)
