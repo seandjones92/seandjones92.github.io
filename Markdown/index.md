@@ -1,11 +1,9 @@
-# Sean Jones
+---
+title: Sean Jones
+---
 
 This is my home site
 
-## Abuut me
+# [About me](about.html)
 
-Just a guy learning about websites
-
-## Posts
-
-You can find my posts [here](posts/index.html)
+# [Posts](posts/index.html)

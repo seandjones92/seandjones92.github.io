@@ -2,10 +2,7 @@
 <html lang="$lang$">
 <head>
   <meta charset="utf-8" />
-  <title>$title$</title>
-  $for(header-includes)$
-  $header-includes$
-  $endfor$
+  <title>Sean Jones</title>
   <style>
     body{
     color: #444;
@@ -15,13 +12,23 @@
     line-height: 1.6em;
     font-size: 18px;
     padding: 0;
-}
+    }
+    a,
+    a:visited {
+      color: #444;
+      text-decoration: underline;
+    }
+    a:hover,
+    a:focus,
+    a:active {
+      color: #444;
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
   <header>
-    <h1>$title$</h1>
-    $if(author)$<p class="author">By $for(author)$$author$$sep$, $endfor$</p>$endif$
+    <h1><a href="/">$title$</a></h1>
   </header>
 
   $body$

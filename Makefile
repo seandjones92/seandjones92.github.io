@@ -20,6 +20,12 @@ $(DST)/%.html: $(SRC)/%.md
 	mkdir -p $(dir $@)
 	$(PANDOC) $< -o $@
 
+# Use python to serve the HTML directory
+.PHONY: serve
+serve:
+	@echo "Serving HTML files at http://localhost:8000"
+	python3 -m http.server --directory $(DST)
+
 # convenience: rebuild everything
 .PHONY: clean
 clean:
