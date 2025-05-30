@@ -12,7 +12,7 @@ MD := $(shell find $(SRC) -name '*.md')
 HTML := $(patsubst $(SRC)/%.md,$(DST)/%.html,$(MD))
 
 # default target
-all: clean $(HTML)
+all: $(HTML)
 
 # pattern rule: build HTML/%.html from Markdown/%.md
 $(DST)/%.html: $(SRC)/%.md
@@ -22,7 +22,7 @@ $(DST)/%.html: $(SRC)/%.md
 
 # Use python to serve the HTML directory
 .PHONY: serve
-serve: all
+serve:
 	@echo "Serving HTML files at http://localhost:8000"
 	python3 -m http.server --directory $(DST)
 
